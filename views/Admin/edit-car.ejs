@@ -1,0 +1,43 @@
+<%-include ('partials/header') -%>
+
+
+<div class="container col-6 mt-5">
+    <h2 class="text-center">Update </h2>
+    <form action="/admin/edit-car/<%= CarData[0]._id %>" autocomplete="off" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-6">
+                
+                <label for="">Name</label>
+                <input type="text" name="name" value="<%= CarData[0].name %>" class="form-control">
+              
+                
+    
+                <label for="">model</label>
+                <input type="text" name="model" value="<%= CarData[0].model %>" class="form-control">
+    
+                <label for="">Type</label>
+                <input type="text" name="type" value="<%= CarData[0].type %>" class="form-control">
+    
+                
+                <label for="">Color</label>
+                <input type="text" name="color" value="<%= CarData[0].color %>" class="form-control">
+    
+                <label for="">Description</label>
+                <input type="text" name="description" value="<%= CarData[0].description %>" class="form-control">
+    
+                <label for="">Price</label>
+                <input type="text" name="price" value="<%= CarData[0].price %>" class="form-control">
+    
+            </div>
+            <div class="col-6">
+                <label for="file">Image</label>
+                <img width="50px" src="<%=`/public/car-images/${CarData[0]._id}.jpg`%>" class="card-img-top" alt="...">
+                <input type="file" id="file" accept=".png .jpg" name="Image"  class="form-control"><br>
+    
+                <button type="submit"  class="btn btn-success mt-3">Update</button>
+            </div>
+        </div>
+           
+           
+    </form>
+</div>

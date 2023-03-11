@@ -1,0 +1,54 @@
+<div class="container mt-5 bg-dark">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bg-dark text-white" style="width: 18rem;">
+               
+                <div class="card-body">
+                    <h3 class="text-center">Users</h3>
+                    <h1 class="text-center">51</h1>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-dark text-white" style="width: 18rem;">
+               
+                <div class="card-body">
+                    <h3 class="text-center">Employe</h3>
+                    <h1 class="text-center">8</h1>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-dark text-white" style="width: 18rem;">
+                
+                <div class="card-body">
+                    <h3 class="text-center">Cars</h3>
+                    <h1 class="text-center">6</h1>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+ 
+
+<div class="container mt-5">
+
+    <a class="btn btn-success" href="/admin/add">Add New Car</a>
+    <div class="row">
+        <% for(var i = 0;i<CarData.length;i++){%>
+          <div class="col-md-3 mt-5 mb-5">
+              <div class="card" style="width: 18rem;">
+                <img width="175px" height="200px" src="<%=`/public/car-images/${CarData[i]._id}.jpg`%>" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= CarData[i].name %></h5>
+                    <p class="card-text">Color : <%= CarData[i].color %></p>
+                    <p class="card-text"><%= CarData[i].description %></p>
+                    <p class="card-text">Exshowroom price : <%= CarData[i].price %></p>
+                    <a href="/admin/edit-car/<%= CarData[i]._id %>" class="btn btn-primary">Edit</a>
+                    <a class="btn btn-danger" href="/admin/delete/<%= CarData[i]._id %>">Delete</a>
+                  </div>
+                </div>
+          </div>
+          <%}%>
+      </div>
+</div>

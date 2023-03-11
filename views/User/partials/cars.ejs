@@ -1,0 +1,19 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+      <% for(var i = 0;i<cars.length;i++){%>
+        <div class="col-md-3 mt-5">
+            <div class="shadow card-border card" style="width: 18rem;">
+              <a href="/specification/<%= cars[i]._id%>">
+                <img width="175px" height="200px" src="<%=`/public/car-images/${cars[i]._id}.jpg`%>" class="card-img-top" alt="...">
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize"><%= cars[i].name %></h5>
+                  <p class="card-text"><%= cars[i].description %></p>
+                  <p class="card-text">Starting price : <strong><%= cars[i].price %></strong></p>
+                  <a class="text-decoration-none " href="/specification/<%= cars[i]._id%>">more information &#9432 </a>
+                </div>
+              </div>
+        </div>
+        <%}%>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<%-include ('partials/header') -%>
+
+
+<div class="container col-6 mt-2">
+    <h2 class="text-center">User Registration form</h2>
+    <form action="/signup" method="post">
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="">Name</label>
+                <input type="text" name="name" class="form-control">
+
+                <label for="">Phone</label>
+                <input type="text" name="phone" class="form-control"><br>
+
+                <label for="">Date of Birth</label>
+                <input type="date" name="dob" value="01-06-2017 class="form-control"><br><br>
+
+                
+                <div class="row container">
+                    <label class="col-4" for="">Gender :</label>
+                    <div class="form-check col-4">
+                        <input class="form-check-input" type="radio" name="gender" value="male" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check col-4">
+                        <input class="form-check-input" type="radio" name="gender" value="female" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Female
+                        </label>
+                      </div>
+                </div><br>
+
+                <label for="">Email</label>
+                <input type="text" name="email" class="form-control">
+
+                <label for="">Password</label>
+                <input type="text" name="password" class="form-control">
+    
+                
+                <label for="">ConfirmPassword</label>
+                <input type="text" name="confirmpassword" class="form-control">
+            </div>
+            <div class="col-6">
+           
+            
+
+            
+            <label for="file">ID proof</label>
+            <!-- <img width="100px" src="/public/img/id-card-crop.jpg.png" alt=""> -->
+            <input type="file" id="file" accept=".png .jpg" name="image"  class="form-control"><br>
+
+            
+            </div>
+            <button type="submit"  class="btn btn-success mt-3">Submit</button>
+        </div>
+            
+
+            
+    </form>
+</div>

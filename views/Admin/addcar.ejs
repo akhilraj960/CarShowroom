@@ -1,0 +1,69 @@
+<%-include ('partials/header') -%>
+
+
+<div class="container col-10 mt-5">
+    <h2 class="text-center">Add car</h2>
+    <form action="/admin/add" method="post" autocomplete="off" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-4">
+                    <label for="">Name</label>
+                    <input type="text" name="name" class="form-control">
+
+                    <label for="">model</label>
+                    <input type="text" name="model" class="form-control">
+
+                    <label for="">Type</label>
+                    <input type="text" name="type" class="form-control">
+
+                    
+                    <label for="">Color</label>
+                    <input type="text" name="color" class="form-control">
+
+                    <label for="">Description</label>
+                    <input type="text" name="description" class="form-control">
+
+                    <label for="">Price</label>
+                    <input type="number" name="price" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label for="">Milage</label>
+                    <input type="number" name="milage" class="form-control">
+
+                    <label for="">Fuel Type</label>
+                    <input type="text" name="fueltype" class="form-control">
+
+                    <label for="">No.Cylinders</label>
+                    <input type="cylinders" name="cylinders" class="form-control">
+
+                    <label for="">power</label>
+                    <input type="number" name="power" class="form-control">
+
+                    <label for="">Torque</label>
+                    <input type="number" name="torque" class="form-control">
+
+                    <label for="">Transmission</label>
+                    <input type="text" name="transmission" class="form-control">
+                    
+                </div>
+                <div class="col-4">
+                    <label for="">Engine</label>
+                    <input type="number" name="engine" class="form-control">
+
+                    <label for="">Seating Capacity</label>
+                    <input type="number" name="seatcapacity" class="form-control">
+
+                    <label for="">Service cost</label>
+                    <input type="text" name="servicecost" class="form-control">
+
+                    <label for="file">Image</label>
+                    <input type="file" id="file" accept=".png .jpg" name="Image"  class="form-control"><br>
+        
+                    <button type="submit"  class="btn btn-success mt-3">Submit</button>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            
+ 
+           
+    </form>
+</div>

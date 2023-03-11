@@ -1,0 +1,17 @@
+<%-include ('partials/header') -%>
+
+<div class="container col-4 mt-5">
+    <h2 class="text-center">User Login</h2><br>
+    <form action="/login" method="post" autocomplete="off">
+
+            <label for="name">Email</label>
+            <input type="text" name="email" placeholder="email" value="akhil@gmail.com" class="form-control"><br>
+
+            <label for="password">Password</label>
+            <input type="text" name="password" placeholder="Password" value="akhil" class="form-control">
+            <br>
+            <a href="/user/forget">forget password</a><br>
+
+            <button type="submit" class="btn btn-success mt-3">Submit</button>
+    </form>
+</div>

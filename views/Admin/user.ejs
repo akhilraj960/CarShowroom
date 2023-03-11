@@ -1,0 +1,36 @@
+<%-include ('partials/header') -%>
+
+
+<div class="container mt-5">
+    <table class="table text-center table-striped-columns">
+        <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">Name</th>
+              <th scope="col">Date of Birth</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email</th>
+              <th scope="col">ID Proof</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for( var i = 0;i<users.length;i++){%>
+              <tr>
+                <th scope="row"><%- i+1%></th>
+                <td class="text-capitalize"><%- users[i].name %></td>
+                <td><%- users[i].dob %></td>
+                <td class="text-capitalize"><%- users[i].gender %></td>
+                <td><%- users[i].phone %></td>
+                <td><%- users[i].email %></td>
+                <td>
+                <img width="150px" src="" alt="">
+                </td>
+                <td><a class="btn btn-danger" href="user/<%- users[i]._id %>">Delete User</a></td>
+              </tr>
+              <%}%>
+            
+          </tbody>
+      </table>
+</div>

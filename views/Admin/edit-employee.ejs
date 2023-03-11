@@ -1,0 +1,46 @@
+<%-include ('partials/header') -%>
+<div class="container">
+
+  <form action="/admin/edit-employee/<%= employee[0]._id %>" method="post">
+
+    <h2 class="text-center">Employee Registration</h2>
+        <label for="">Name</label>
+        <input type="text"  name="name" value="<%= employee[0].name %>" placeholder="Employee Name" class="form-control">
+        <br>
+        <label for="">Phone</label>
+        <input type="text" name="phone" value="<%= employee[0].phone %>" placeholder="Employee Phone" class="form-control">
+        <br>
+        <label for="">Email</label>
+        <input type="text" name="email" value="<%= employee[0].email %>" placeholder="Employee Email" class="form-control">
+        <br>
+        <label for="">Gender</label><br><br>
+
+        
+        <div class="row">
+          <div class="col-2">
+           <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" value="Male" <%= (employee[0].gender == 'Male') ? 'checked' : '' %>>
+              <label class="form-check-label" for="flexRadioDefault1">
+                Male
+              </label>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" value="Female" <%= (employee[0].gender == 'Female') ? 'checked' : '' %>>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Female
+              </label>
+            </div>
+          </div>  
+        </div>
+
+        <br>
+        <label for="">Password</label>
+        <input type="text" name="password" value="<%= employee[0].password %>" placeholder="Employee Email" class="form-control">
+        <br>
+    
+    
+    <button class="btn btn-success" type="submit">submit</button>
+  </form>
+</div> 
